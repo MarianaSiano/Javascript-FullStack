@@ -1,20 +1,25 @@
-import Nome from "./Componentes/Nome";
 import { useState } from "react";
 
 function App() {
-  const [aluno, setAluno] = useState("Daniel");
-
-  function handleChangeName(nome) {
-    setAluno(nome);
-  }
-
   return (
     <div>
-      <h1>Componente App</h1>
-      <br />
+      <h1>Cadastrando Usuário</h1>
 
-      <h2>Olá, {aluno}</h2>
-      <button onClick={ () => handleChangeName("Marina Carvalho") }>Alterar Nome</button>
+      <form>
+        <label>Nome: </label> <br />
+        <input placeholder="Digite seu nome" /><br />
+        <br />
+
+        <label>Email: </label> <br />
+        <input placeholder="Digite seu email" /><br />
+        <br />
+
+        <label>Idade: </label> <br />
+        <input placeholder="Digite sua idade" /> <br />
+        <br />
+
+        <button type="submit">Registrar</button>
+      </form>
     </div>
   );
 }
